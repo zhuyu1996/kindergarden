@@ -1,0 +1,414 @@
+.ibox{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*返回*/
+.if-d-backbtn{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 150px;
+    /*min-width: 80px;*/
+    height: 40px;
+    border: 1px solid #EBE9E9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 1px 1px #D3D3D3;
+    margin-left: -2.5%;
+    font-size: 18px;
+    text-align: right;
+    line-height: 40px;
+    color: #000;
+    background-color: #fff;
+    z-index: 100;
+    cursor: pointer;
+
+    transition:margin-left,background-color 1s,1s;
+    -moz-transition:margin-left,background-color 1s,1s; /* Firefox 4 */
+    -webkit-transition:margin-left,background-color 1s,1s; /* Safari and Chrome */
+    -o-transition:margin-left,background-color 1s,1s; /* Opera */
+
+}
+.if-d-backbtn:hover{
+    margin-left: -0.1%;
+    background-color: rgb(51,112,183);
+}
+.if-d-backbtn a{
+    float: right;
+    width: 100%;
+    height: 100%;
+    padding-right: 14%;
+    transition: color 0.3s;
+    -moz-transition: color 0.3s; /* Firefox 4 */
+    -webkit-transition: color 0.3s; /* Safari and Chrome */
+    -o-transition: color 0.3s; /* Opera */
+}
+.if-d-backbtn:hover a{
+    color: #fff;
+}
+
+
+
+.addVideo{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 10px 20px;
+}
+.addVideo input{
+    width: 80px;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.videoAdd{
+    background-color: #1ab394;
+}
+.videoManage{
+    background-color: #f8ac59;
+}
+.videoDel{
+    background-color: #ed5565;
+}
+.videoCancle{
+    background-color: #f7a54a;
+}
+
+
+.titleVideo p{
+    width: 80%;
+    text-indent: 28px;
+}
+.mainVideo{
+    width: 100%;
+    height: auto;
+}
+.mainVideo video{
+    width: auto !important;
+    height: 200px !important;
+    /*float: left;*/
+    cursor: pointer;
+}
+.mainVideo .everyVideo{
+    position: relative;
+    width: auto;
+    height: 200px;
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+
+
+.uploadVideo{
+    width: 80%;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: 185px;
+    z-index: 100;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+i.close{
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    right: 10px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings',serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.close:before{
+    content: "\e088";
+}
+
+.gray{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #f3f3f4;
+    opacity: 0.7;
+}
+
+iframe{
+    border: none;
+}
+
+/*管理相册按钮*/
+i.manageVideo{
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eee;
+    /*border-radius: 4px;*/
+    background-color: white;
+    cursor: pointer;
+    z-index: 100;
+    /*background: url(../../img/checked.png);*/
+}
+
+
+
+
+
+/*相册详情*/
+.showVideo{
+    display: none;
+    width: 60%;
+    background-color: black;
+    height: 96%;
+    min-height: 800px;
+    position: fixed;
+    top:2%;
+    left: 20%;
+    z-index: 120;
+}
+.showVideo .content{
+    position: absolute;
+    opacity: 1;
+    width: 70%;
+    height: 90%;
+}
+.showVideo .content .changeVideo{
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+.showVideo .content .changeVideo img{
+    width: 40%;
+    height: auto;
+    margin-left: 30%;
+    opacity: 0.3;
+}
+.showVideo .content .changeVideo img:hover{
+    opacity: 0.8;
+}
+.showVideo .content img{
+    width: 70%;
+    height: auto;
+    max-height: 90%;
+    margin-top: 5%;
+}
+.showVideo .comment{
+    width: 28%;
+    height: 85%;
+    margin-top: 4%;
+    margin-right: 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+.showVideo .close{
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings',serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.5;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.showVideo .close:hover{
+    opacity: 0.9;
+}
+.close:before{
+    content: "\e088";
+}
+/*评论*/
+.showVideo .comment h3{
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+.showVideo .comment .thepLoading{
+    padding-left: 10px;
+}
+.showVideo .comment .mainComment{
+    width: 90%;
+    height: auto;
+    padding-left: 6%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+.showVideo .comment .mainComment .mainCommentContent{
+    width: auto;
+    height: auto;
+}
+.showVideo .comment .mainComment .mainCommentContent span{
+    display: inline-block;
+    height: 30px;
+}
+.showVideo .comment .mainComment .mainCommentContent span.people{
+    font-weight: 700;
+    cursor: pointer;
+}
+.showVideo .comment .mainComment .mainCommentContent .sendMainCommentContent{
+    width: auto;
+    height: auto;
+    padding-left: 15px;
+}
+.showVideo .comment .mainCommentInput{
+    width: 90%;
+    height: auto;
+    padding-left: 6%;
+}
+.showVideo .comment input.editComment{
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.showVideo .comment .mainCommentInput .buttonSure{
+    width: 100%;
+    height: 46px;
+    padding-top: 10px;
+}
+.showVideo .comment .mainCommentInput .buttonSure input{
+    float: right;
+    width: 60px;
+    height: 30px;
+    margin-right: 10%;
+    border: none;
+    background-color: #5CAAE6;
+    color: white;
+    border-radius: 5px;
+}
+.showVideo .comment .mainCommentInput{
+    margin-bottom: 10px;
+}
+.showVideo .comment .mainCommentInput input.replyComment{
+    width: 60%;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+.showVideo .comment .mainCommentInput input.replyButton{
+    margin-left: 5%;
+    width: 20%;
+    height: 30px;
+    border: none;
+    background-color: #5CAAE6;
+    color: white;
+    border-radius: 5px;
+}
+.showVideo .comment .mainCommentContent:hover i.delComment{
+    opacity: 1;
+}
+
+i.delComment{
+    width: 14px;
+    height: 16px;
+    display: block;
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    margin-right: 10px;
+    float: right;
+    background: url(../../img/delIco.png)
+}
+#nowVideo{
+    width: 70% !important;
+    border: 1px solid #eee;
+}
+
+
+
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+
+
+@media screen and (max-width: 800px){
+    .ibox-title{
+        height: 60px;
+    }
+    .ibox{
+        width: 100%;
+        height: auto;
+    }
+    .if-d-backbtn{
+        font-size: 13px;
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+        top: 57px;
+    }
+
+    .uploadVideo{
+        width: 98%;
+        left: 1%;
+        top:40px;
+    }
+    .everyVideo{
+        margin: 0 !important;
+    }
+    .everyVideo video{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .showVideo{
+        width: 98%;
+        height: auto;
+        min-height: 0;
+        left: 1%;
+        border-radius: 10px;
+        position: absolute;
+        top: 10%;
+    }
+    .showVideo .content{
+        width: 100%;
+        height: auto;
+        float: none;
+        position: relative;
+        top: 20px;
+    }
+    .showVideo .content .changeVideo{
+        display: none;
+    }
+    .showVideo .content video{
+        width: 100% !important;
+        margin: 10% !important;
+    }
+    .showVideo .comment{
+        /*display: none;*/
+        float: none;
+        width: 100%;
+        height:auto;
+    }
+    i.delComment{
+        opacity: 0.5;
+    }
+}

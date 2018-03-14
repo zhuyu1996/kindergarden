@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <title>班级课表管理</title>
+
+
+  <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+  <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+  <link href="css/customCss/Mystyle.css?v=1.0.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+  <div class="wrapper wrapper-content course-margin">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 animated fadeInRight class-mg">
+        <div class="mail-box-header">
+          <button id="new-class" class="btn btn-white btn-lg" data-toggle="tooltip" data-placement="left" disabled><i class="glyphicon glyphicon-upload"></i> 新建课表</button>
+          <button id="change-class" class="btn btn-white btn-lg" data-toggle="tooltip" data-placement="left" disabled><i class="glyphicon glyphicon-pencil"></i> 修改课表</button>
+          <button id="change-class-yes" class="btn btn-primary btn-sm myHidden" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-pencil"></i> 确定</button>
+          <button id="change-class-no" class="btn btn-warning btn-sm myHidden" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-upload"></i> 取消</button>
+          <div class="differ-class-box">
+            <span class="startTime">本学期开学时间:</span>
+            <span class="startMouth"></span><input class="inputMouth myHidden">月
+            <span class="startDay"></span><input class="inputDay myHidden">日
+            <span class="inputStartTime"></span>
+            <button id="changeTime-class" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-pencil"></i> 修改时间</button>
+            <button id="change-class-yes2" class="btn btn-primary btn-sm myHidden" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-pencil"></i> 确定</button>
+            <button id="change-class-no2" class="btn btn-warning btn-sm myHidden" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-upload"></i> 取消</button>
+            <span class="removeTclass">班级：</span><select name="class" class="removeTclassse">
+              <option class="class-wait"></option>
+            </select>
+
+            第<select class="c-week" name="week" height="50px" disabled></select>周
+          </div>
+          
+        </div>
+        <div class="mail-box">
+
+          <table class="table table-bordered class-table">
+            <colgroup>
+              <col style="width: 5%;">
+              <col style="width: 8.335%;">
+              <col style>
+              <col style>
+              <col style>
+              <col style>
+              <col style>
+              <col style>
+              <col style>
+            </colgroup>
+            <thead>
+              <tr>
+                <th class = "class-th-time">时<span></span></th>
+                <th class = "class-th-time2">间<span></span></th>
+                <th>周一<span></span></th>
+                <th>周二<span></span></th>
+                <th>周三<span></span></th>
+                <th>周四<span></span></th>
+                <th>周五<span></span></th>
+                <th>周六<span></span></th>
+                <th>周日<span></span></th>
+              </tr>
+            </thead>
+            <div>
+            <tbody>
+              <tr>
+                <td class="class-time CT-B class-end"></td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time CT-B CT-T class-end">上午</td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time CT-B CT-T class-end"></td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time CT-T class-end"></td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="td-border-black">
+                <td class="class-time CT-B class-end"></td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time CT-B CT-T class-end">下午</td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time CT-T class-end"></td>
+                <td class="class-time class-end2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="class-time class-end no_use">周工作重</td>
+                <td class="workspace" colspan="8"></td>
+              </tr>
+            </tbody>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="delayimg">
+    <img src="img/loading.gif">
+  </div>
+
+  <!-- 新建课表 START -->
+
+  <div class="cover"></div>
+  <div class="new-class">
+    <div class="function-box">
+      <!-- 
+      <span class="removeTclass">班级：</span>
+      <select name="class" class="class addNewClass">
+      </select>
+
+
+      第<select name="week" height="50px" class="week"></select>周
+      -->
+      <div class="close-btn" onclick="close_new_class()">
+        <span class="glyphicon glyphicon-remove-sign"></span>
+      </div>
+    </div>
+    <div class="ok-btn">
+      <button id="new-ok-btn" class="btn btn-primary btn-lg" data-toggle="tooltip" data-placement="left"><i class="glyphicon glyphicon-pencil"></i> 确定</button>
+    </div>
+    <div class="new-box">
+      <table class="table table-bordered new-table" id="new-table">
+        <colgroup>
+          <col style="width: 5.556%;">
+          <col style="width: 11.113%;">
+          <col style>
+          <col style>
+          <col style>
+          <col style>
+          <col style>
+          <col style>
+          <col style>
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="2">时间</th>
+            <th>周一</th>
+            <th>周二</th>
+            <th>周三</th>
+            <th>周四</th>
+            <th>周五</th>
+            <th>周六</th>
+            <th>周日</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="class-time CT-B class-end"></td>
+            <!-- <td class="class-end"><input class='class-change-input' value=''></td> -->
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <!-- <td><input class='class-change-input' value=''></td>
+            <td><input class='class-change-input' value=''></td>
+            <td><input class='class-change-input' value=''></td>
+            <td><input class='class-change-input' value=''></td>
+            <td><input class='class-change-input' value=''></td> -->
+          </tr>
+          <tr>
+            <td class="class-time CT-B CT-T class-end">上午</td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+          <tr>
+            <td class="class-time CT-T class-end"></td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+          <tr>
+            <td class="class-time CT-T class-end"></td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+          <tr class="td-border-black">
+            <td class="class-time CT-B class-end"></td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr><tr>
+            <td class="class-time CT-B CT-T class-end">下午</td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+          <tr>
+            <td class="class-time CT-T class-end"></td>
+            <td class="class-end"><textarea class="class-change-input" style="width: 94.44%;height: 30px;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+            <td><textarea class="class-change-input" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+          <tr>
+            <td class="class-end">周工作重</td>
+            <!-- <td colspan="6"><input class='class-change-input' value=''></td> -->
+            <td colspan="6"><textarea class="writeworkspace" style="width: 94.44%;resize: none"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+
+  <!-- 新建课表 END -->
+
+
+  <!-- 全局js -->
+  <script src="js/jquery.min.js?v=2.1.4"></script>
+  <script src="js/bootstrap.min.js?v=3.3.6"></script>
+  <script src="js/self-option.js"></script>
+
+
+
+  <!-- 自定义js -->
+  <script src="js/content.js?v=1.0.0"></script>
+  <script src="js/coustomJs/class.js?v=1.0.0"></script>
+  <script src="js/coustomJs/classAJAX.js?v=1.0.0"></script>
+
+
+</body>
+
+</html>

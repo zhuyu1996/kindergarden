@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<button>click</button>
+<script type="text/javascript">
+window.onload = function(){
+	var ajax = function(method,url,data){
+		var xhr = new XMLHttpRequest();
+		xhr.open(method,url,true);
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xhr.onreadystatechange = function(res){
+			if(xhr.readyState == 4){
+				if(xhr.status == 200){
+					alert();
+				}
+			}
+		}
+		xhr.send(data);
+	}
+	var x = "studentjson="+ JSON.stringify({"a":1});
+	ajax("POST","../StudentAddServlet",x);
+	
+}
+</script>
+</body>
+</html>
